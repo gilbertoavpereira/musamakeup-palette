@@ -49,6 +49,7 @@ export default function App() {
 
   return (
     <div className="App">
+      <div class="header" />
       <Glitters
         selectedGlitters={selectedGlitters}
         onSelectGlitter={handlerOnSelectGlitter}
@@ -59,6 +60,7 @@ export default function App() {
         size={size}
         setSize={handlerOnSelectHole}
       />
+      <div class="footer" />
     </div>
   );
 }

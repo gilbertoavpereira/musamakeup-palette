@@ -29,7 +29,7 @@ export default function Paletters({
   return (
     <div class="top">
       <h5>{labels.selectEyeShadowPans}</h5>
-      <div>{rows}</div>
+      <div class="selected">{rows}</div>
       <h6>
         {labels.selectEyeShadowPans} <span>{"10.00 €"}</span>
       </h6>

@@ -266,7 +266,9 @@ const labels = {
   sizePalette: "{0} hole",
   addToCart: "ADD TO CART",
   added: "added",
-  remove: "remove"
+  remove: "remove",
+  clickToAdd: "click to add",
+  clickToRemove: "Click to remove"
 };
 
 export { labels, glitters, palettes };

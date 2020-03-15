@@ -1,9 +1,9 @@
 {
-  "name": "react",
+  "name": "musamakeup-palette",
   "version": "1.0.0",
-  "description": "React example starter project",
-  "keywords": ["react", "starter"],
-  "main": "src/index.js",
+  "description": "",
+  "keywords": [],
+  "main": "src/entry.js",
   "dependencies": {
     "react": "16.12.0",
     "react-dom": "16.12.0",

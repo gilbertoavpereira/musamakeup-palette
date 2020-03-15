@@ -69,8 +69,28 @@ button {
   border: solid 1px transparent;
   color: #fff;
   padding: 15px;
+  width: calc(50% - 20px);
 }
 
 .hole.active {
   border-color: white;
+}
+
+.top {
+  color: white;
+}
+
+.top h5 {
+  margin: 15px;
+}
+
+.top h6 {
+  margin: 5px;
+  padding-left: 10px;
+  text-align: left;
+}
+
+.top h6 span {
+  margin-right: 5px;
+  float: right;
 }

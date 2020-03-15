@@ -1,5 +1,5 @@
 import React from "react";
-import { glitters } from "../../data";
+import { glitters, labels } from "../../data";
 
 import className from "classnames";
 
@@ -28,23 +28,29 @@ export default function Paletters({
   }
   return (
     <div class="top">
+      <h5>{labels.selectEyeShadowPans}</h5>
       <div>{rows}</div>
-      <button
-        class={className("hole", { active: size === 6 })}
-        onClick={() => {
-          setSize(6);
-        }}
-      >
-        6 hole
-      </button>
-      <button
-        class={className("hole", { active: size === 18 })}
-        onClick={() => {
-          setSize(18);
-        }}
-      >
-        18 hole
-      </button>
+      <h6>
+        {labels.selectEyeShadowPans} <span>{"10.00 €"}</span>
+      </h6>
+      <div class="holes">
+        <button
+          class={className("hole", { active: size === 6 })}
+          onClick={() => {
+            setSize(6);
+          }}
+        >
+          6 hole
+        </button>
+        <button
+          class={className("hole", { active: size === 18 })}
+          onClick={() => {
+            setSize(18);
+          }}
+        >
+          18 hole
+        </button>
+      </div>
     </div>
   );
 }

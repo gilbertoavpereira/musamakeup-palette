@@ -7,7 +7,8 @@ export default function Paletters({
   size,
   setSize,
   selectedGlitters,
-  onRemoveGlitter
+  onRemoveGlitter,
+  showAddToCart
 }) {
   const rows = [];
   for (let i = 0; i < size; i++) {
@@ -28,29 +29,44 @@ export default function Paletters({
   }
   return (
     <div class="top">
-      <h5>{labels.selectEyeShadowPans}</h5>
+      <h5>{!showAddToCart ? labels.selectEyeShadowPans : "GREAT CHOICE"}</h5>
       <div class="selected">{rows}</div>
-      <h6>
-        {labels.selectEyeShadowPans} <span>{"10.00 €"}</span>
-      </h6>
-      <div class="holes">
-        <button
-          class={className("hole", { active: size === 6 })}
-          onClick={() => {
-            setSize(6);
-          }}
-        >
-          6 hole
-        </button>
-        <button
-          class={className("hole", { active: size === 18 })}
-          onClick={() => {
-            setSize(18);
-          }}
-        >
-          18 hole
-        </button>
-      </div>
+      {showAddToCart && (
+        <h6>
+          <input type="checkbox" />
+          CREAMY GLITTER BRUSH<span>{"+7.00 €"}</span>
+        </h6>
+      )}
+      {showAddToCart && (
+        <div class="adds">
+          <button class="add">{labels.addToCart} (10.00 €)</button>
+        </div>
+      )}
+      {!showAddToCart && (
+        <h6>
+          {labels.selectEyeShadowPans} <span>{"10.00 €"}</span>
+        </h6>
+      )}
+      {!showAddToCart && (
+        <div class="holes">
+          <button
+            class={className("hole", { active: size === 6 })}
+            onClick={() => {
+              setSize(6);
+            }}
+          >
+            6 hole
+          </button>
+          <button
+            class={className("hole", { active: size === 18 })}
+            onClick={() => {
+              setSize(18);
+            }}
+          >
+            18 hole
+          </button>
+        </div>
+      )}
     </div>
   );
 }

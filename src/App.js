@@ -30,7 +30,6 @@ export default function App() {
     }
 
     setSelectedGlitters(newSelectedGlitters);
-    console.log(newSelectedGlitters);
   };
 
   const handlerOnRemoveGlitter = id => {
@@ -47,6 +46,9 @@ export default function App() {
     setSelectedGlitters([]);
   };
 
+  const showAddToCart =
+    selectedGlitters.length === size && selectedGlitters.indexOf(-1) === -1;
+
   return (
     <div className="App">
       <div class="header" />
@@ -58,6 +60,7 @@ export default function App() {
         onRemoveGlitter={handlerOnRemoveGlitter}
         selectedGlitters={selectedGlitters}
         size={size}
+        showAddToCart={showAddToCart}
         setSize={handlerOnSelectHole}
       />
       <div class="footer" />

@@ -79,6 +79,14 @@ button {
   width: calc(50% - 20px);
 }
 
+.add {
+  background: #fff;
+  border: solid 1px transparent;
+  color: #111;
+  padding: 15px;
+  width: calc(100% - 20px);
+}
+
 .hole.active {
   border-color: white;
 }
@@ -93,7 +101,8 @@ button {
 }
 
 .top h5 {
-  margin: 15px;
+  margin: 0;
+  padding: 15px;
 }
 
 .top h6 {
